@@ -151,17 +151,54 @@ export const educationData = [
 
 export const certificationsData = [
   {
-    title: "MERN Stack Development (6-Month Intensive Course)",
-    issuer: "Formal Training Program",
-    type: "Certificate of Completion",
-    credentialUrl: "https://drive.google.com/file/d/1GqOKbEX4BbXv7caRzufTovqih2FbonNQ/view",
-    skillsCovered: [
-      "React.js & Component Architecture",
-      "Node.js & Express.js REST APIs",
-      "MongoDB & Mongoose Schema Modeling",
-      "JWT Authentication & Middleware Security",
-      "CRUD Operations & Full-Stack Integration",
-    ],
+    title: "Full-Stack MERN Development Certificate",
+    issuer: "Emancipation Edutech Private Limited",
+    date: "2026",
+    type: "Verified Credential",
+    image: "/Mern.certificate.jpeg",
+    credentialUrl: "/MERN-CERTIFICATE.pdf",
+    description:
+      "Completed rigorous 6-month hands-on immersion in modern JavaScript full-stack development, mastering React.js, Node.js, Express.js, MongoDB schemas, REST API architecture, and JWT authentication.",
+    skillsCovered: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "JWT"],
+  },
+  {
+    title: "Simplilearn Professional Certificate",
+    issuer: "Simplilearn SkillUp",
+    date: "2026",
+    type: "Verified Credential",
+    image: "/Java.certificate.png",
+    credentialUrl: "https://simpli-web.app.link/e/wZdTNPhug7b",
+    description:
+      "Foundational object-oriented programming in Java SE, focusing on OOP encapsulation, inheritance hierarchies, polymorphism, interfaces, robust exception handling, and algorithmic logic.",
+    skillsCovered: ["Java SE", "OOP", "Exception Handling", "Inheritance", "Algorithms"],
+  },
+  {
+    title: "Python Essentials 1",
+    issuer: "Cisco Networking Academy (Cisco NetAcad)",
+    recipientName: "Arib Akhtar",
+    date: "22 Oct 2026",
+    credentialId: "3dc663c5-80eb-43d5-a017-c6bcb0ef1cb4",
+    type: "Verified Credential",
+    image: "/Python.certificate.png",
+    credentialUrl:
+      "/Python_Essentials_1_certificate_arib-000789-gmail-com_3dc663c5-80eb-43d5-a017-c6bcb0ef1cb4.pdf",
+    description:
+      "Successfully completed Python Essentials 1 through the Cisco Networking Academy program.",
+    skillsCovered: ["Python 3", "Data Structures", "Algorithms", "OOP Logic", "Automation"],
+  },
+  {
+    title: "Python Essentials 2",
+    issuer: "Cisco Networking Academy (Cisco NetAcad)",
+    recipientName: "Arib Akhtar",
+    date: "22 Oct 2026",
+    credentialId: "6560b440-40fa-486e-b674-e826fcb9055b",
+    type: "Verified Credential",
+    image: "/Python2.certificate.png",
+    credentialUrl:
+      "/Python_Essentials_2_certificate_arib-000789-gmail-com_b560b440-40fa-486e-b674-e826fcb9055b.pdf",
+    description:
+      "Successfully completed Python Essentials 2 through the Cisco Networking Academy program.",
+    skillsCovered: ["Python 3", "Advanced OOP", "Packages & Modules", "Generators & Closures", "File I/O"],
   },
 ];
 

@@ -11,7 +11,7 @@ const credentialsData = [
     issuerBadge: "Comprehensive Web Engineering Program",
     date: "2026",
     type: "Verified Credential",
-    image: "/cert-mern.webp",
+    image: "/Mern.certificate.jpeg",
     description:
       "Completed rigorous 6-month hands-on immersion in modern JavaScript full-stack development, mastering React.js, Node.js, Express.js, MongoDB schemas, REST API architecture, and JWT authentication.",
     highlights: [
@@ -30,7 +30,7 @@ const credentialsData = [
     issuerBadge: "SkillUp Certified",
     date: "2026",
     type: "Verified Credential",
-    image: "/cert-java.webp",
+    image: "/Java.certificate.png",
     description:
       "Foundational object-oriented programming in Java SE, focusing on OOP encapsulation, inheritance hierarchies, polymorphism, interfaces, robust exception handling, and algorithmic logic.",
     highlights: [
@@ -43,7 +43,7 @@ const credentialsData = [
     isVerified: true,
   },
   {
-    id: "python-essentials",
+    id: "python-essentials-1",
     title: "Python Essentials 1",
     organization: "Cisco Networking Academy",
     issuerBadge: "Cisco NetAcad",
@@ -51,7 +51,7 @@ const credentialsData = [
     date: "2026",
     credentialId: "3dc663c5-80eb-43d5-a017-c6bcb0ef1cb4",
     type: "Verified Credential",
-    image: "/cert-python.webp",
+    image: "/Python.certificate.png",
     description:
       "Successfully completed Python Essentials 1 through the Cisco Networking Academy program.",
     highlights: [
@@ -71,9 +71,9 @@ const credentialsData = [
     issuerBadge: "Cisco NetAcad",
     recipientName: "Arib Akhtar",
     date: "2026",
-    credentialId: "b560b440-40fa-486e-b674-e826fcb9055b",
+    credentialId: "6560b440-40fa-486e-b674-e826fcb9055b",
     type: "Verified Credential",
-    image: "/cert-python-2.webp",
+    image: "/Python2.certificate.png",
     description:
       "Successfully completed Python Essentials 2 through the Cisco Networking Academy program.",
     highlights: [
@@ -164,10 +164,9 @@ const Credentials = () => {
 
         {/* ==============================================================
             2. 4-COLUMN PROFESSIONAL HUMAN-CRAFTED CARDS
-            - Single row per 4 items on desktop (grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6)
+            - Clean 4-column layout on desktop (grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6)
             - Landscape preview image ratio at top (aspect-[16/10])
             - Solid black box background (bg-black)
-            - All certificate dates updated to 2026
             - Sleek "View Certificate" action button
         ============================================================== */}
         <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -234,10 +233,22 @@ const Credentials = () => {
                   </h3>
 
                   {/* Issuer Subtitle Badge */}
-                  <div className="mt-1 flex items-center gap-1.5 text-[11px] text-zinc-400 font-mono">
+                  <div className="mt-1 flex flex-wrap items-center gap-1.5 text-[11px] text-zinc-400 font-mono">
                     <span className="h-1 w-1 rounded-full bg-purple-400" />
                     <span>{item.issuerBadge}</span>
+                    {item.recipientName && (
+                      <>
+                        <span className="text-zinc-600">&bull;</span>
+                        <span className="text-zinc-300">{item.recipientName}</span>
+                      </>
+                    )}
                   </div>
+
+                  {item.credentialId && (
+                    <div className="mt-1 text-[10px] font-mono text-zinc-400 truncate">
+                      Cert ID: <span className="text-purple-300">{item.credentialId}</span>
+                    </div>
+                  )}
 
                   {/* Short Description */}
                   <p className="mt-2.5 text-xs text-zinc-400 leading-relaxed line-clamp-3 flex-1">
@@ -347,6 +358,19 @@ const Credentials = () => {
               <h3 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">
                 {selectedCred.title}
               </h3>
+
+              {selectedCred.recipientName && (
+                <div className="mt-2 text-xs font-mono text-zinc-400 flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <span>
+                    Recipient: <span className="text-white font-medium">{selectedCred.recipientName}</span>
+                  </span>
+                  {selectedCred.credentialId && (
+                    <span className="text-zinc-400 text-[11px]">
+                      Cert ID: <span className="text-purple-300 font-mono">{selectedCred.credentialId}</span>
+                    </span>
+                  )}
+                </div>
+              )}
 
               <p className="mt-3 text-sm text-zinc-300 leading-relaxed">
                 {selectedCred.description}
