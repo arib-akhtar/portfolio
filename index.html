@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="/fab.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arib Akhtar — Portfolio</title>
+    <meta name="description" content="Full-Stack Developer crafting thoughtful digital experiences with modern web technologies, clean architecture, and purposeful interactions." />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content="Arib Akhtar — Full-Stack Developer" />
+    <meta property="og:description" content="Full-Stack Developer crafting thoughtful digital experiences with modern web technologies, clean architecture, and purposeful interactions." />
+    <meta property="og:type" content="website" />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- Preload Critical Above-The-Fold Assets -->
+    <link rel="preload" as="image" href="/arib-coat.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/Arib.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/Akhtar.webp" type="image/webp" />
+
+    <!-- Google Fonts (Optimized Non-Blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      />
+    </noscript>
+
+    <style>
+      /* Ensure solid pure black initial state from frame zero to prevent white flash or FOUC */
+      html, body {
+        background-color: #000000 !important;
+        background: #000000 !important;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      #root {
+        background-color: #000000 !important;
+        min-height: 100vh;
+      }
+      #root.app-loading {
+        opacity: 0 !important;
+        visibility: hidden !important;
+      }
+      #root.app-ready {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-black overflow-x-hidden" style="background-color: #000000; margin: 0; padding: 0;">
+    <div id="root" class="app-loading"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
