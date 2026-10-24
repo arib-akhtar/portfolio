@@ -90,7 +90,7 @@ export const projects = [
       type: "Full-Stack MERN",
     },
     links: {
-      live: "https://frontend-2fbbiiuld-skillhub0260-6584.vercel.app",
+      live: "https://job-portal-2627.vercel.app",
       github: "https://github.com/arib-akhtar",
     },
     accentGlow: "rgba(168, 85, 247, 0.35)",
